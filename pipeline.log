@@ -12,3 +12,37 @@
 2026-03-05 00:56:22,701 - INFO - Loading data into SQLite...
 2026-03-05 00:56:22,735 - INFO - Pipeline finished successfully in 0.75 seconds.
 2026-03-05 00:56:22,735 - INFO - --- Pipeline Process Ended ---
+2026-03-05 03:21:55,551 - INFO - --- ETL Pipeline Started ---
+2026-03-05 03:21:55,551 - INFO - Extracting data from: http://universities.hipolabs.com/search?country=Thailand
+2026-03-05 03:22:22,883 - INFO - Successfully retrieved 67 records.
+2026-03-05 03:22:22,883 - INFO - Transforming data with Polars...
+2026-03-05 03:22:22,954 - INFO - Loading data into intern_test.db...
+2026-03-05 03:22:22,997 - INFO - Data loaded successfully.
+2026-03-05 03:27:04,506 - INFO - --- Pipeline Started ---
+2026-03-05 03:27:04,506 - INFO - Extracting data from: http://universities.hipolabs.com/search?country=Thailand
+2026-03-05 03:27:05,631 - INFO - Successfully retrieved 67 records.
+2026-03-05 03:27:05,632 - INFO - Transforming data...
+2026-03-05 03:27:05,636 - INFO - Loading data into SQLite...
+2026-03-05 03:27:05,680 - INFO - Pipeline finished successfully in 1.17 seconds.
+2026-03-05 03:27:05,680 - INFO - --- Pipeline Process Ended ---
+2026-03-05 03:28:34,641 - INFO - --- ETL Pipeline Started ---
+2026-03-05 03:28:34,641 - INFO - Extracting data from: http://universities.hipolabs.com/search?country=Thailand
+2026-03-05 03:28:35,198 - INFO - Successfully retrieved 67 records.
+2026-03-05 03:28:35,199 - INFO - Transforming data with Polars...
+2026-03-05 03:28:35,204 - INFO - Loading data into intern_test.db...
+2026-03-05 03:28:35,221 - INFO - Data loaded successfully.
+2026-03-05 03:28:35,231 - INFO - Backup exported to universities_result.csv
+2026-03-05 03:28:35,231 - INFO - --- Pipeline Finished Successfully (0.59s) ---
+2026-03-05 03:35:15,427 - INFO - ==================================================
+2026-03-05 03:35:15,427 - INFO -   ETL Pipeline Started
+2026-03-05 03:35:15,427 - INFO - ==================================================
+2026-03-05 03:35:15,427 - INFO - Extracting data from: http://universities.hipolabs.com/search?country=Thailand
+2026-03-05 03:35:16,020 - INFO - Successfully retrieved 67 records.
+2026-03-05 03:35:16,020 - INFO - Transforming data with Polars...
+2026-03-05 03:35:16,025 - INFO - Transformation complete. 67 clean records ready.
+2026-03-05 03:35:16,025 - INFO - Loading data into 'intern_test.db'...
+2026-03-05 03:35:16,066 - INFO - Loaded 67 rows successfully.
+2026-03-05 03:35:16,066 - INFO - Running result check...
+2026-03-05 03:35:16,073 - INFO - Data exported to 'universities_result.csv'
+2026-03-05 03:35:16,076 - INFO - Pipeline finished successfully in 0.65s
+2026-03-05 03:35:16,076 - INFO - ==================================================
