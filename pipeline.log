@@ -1,0 +1,14 @@
+2026-03-05 00:48:21,749 - INFO - --- Pipeline Started ---
+2026-03-05 00:48:21,750 - INFO - Extracting data from: http://universities.hipolabs.com/search?country=Thailand
+2026-03-05 00:48:22,417 - INFO - Successfully retrieved 67 records.
+2026-03-05 00:48:22,417 - INFO - Transforming data...
+2026-03-05 00:48:22,421 - INFO - Loading data into SQLite...
+2026-03-05 00:48:22,458 - INFO - Pipeline finished successfully in 0.71 seconds.
+2026-03-05 00:48:22,458 - INFO - --- Pipeline Process Ended ---
+2026-03-05 00:56:21,988 - INFO - --- Pipeline Started ---
+2026-03-05 00:56:21,989 - INFO - Extracting data from: http://universities.hipolabs.com/search?country=Thailand
+2026-03-05 00:56:22,689 - INFO - Successfully retrieved 67 records.
+2026-03-05 00:56:22,696 - INFO - Transforming data...
+2026-03-05 00:56:22,701 - INFO - Loading data into SQLite...
+2026-03-05 00:56:22,735 - INFO - Pipeline finished successfully in 0.75 seconds.
+2026-03-05 00:56:22,735 - INFO - --- Pipeline Process Ended ---
