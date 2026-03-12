@@ -1,2 +1,83 @@
-requests
+requests #requests คือ library ของ Python ที่ใช้สำหรับ ส่ง HTTP request ไปหา API หรือเว็บไซต์ผ่าน internet พูดง่าย ๆ คือ 👉 ใช้ ดึงข้อมูลจากระบบอื่น
+# response = requests.get("https://api.example.com/data")
+# print(response.json())
+# อธิบาย
+# requests.get()
+# คือการส่ง HTTP GET request เหมือนเราไปเปิดเว็บ แต่เป็นโปรแกรมเปิดแทน
+
+# ข้อมูลที่ได้จาก API ส่วนใหญ่จะเป็น JSON เราสามารถแปลงเป็น Python ได้ data = response.json()ผลลัพธ์จะกลายเป็น 
+# {
+#  'title': 'Harry Potter',
+#  'year': 1997
+# }
+
+# ตัวอย่างใช้ใน Data Pipeline
+# import requests
+# url = "https://openlibrary.org/subjects/children.json"
+# resp = requests.get(url)
+# data = resp.json()
+
+# Flow
+# API
+#  ↓
+# requests
+#  ↓
+# JSON data
+
+
 polars
+# polars คือ library สำหรับ จัดการข้อมูลแบบตาราง (DataFrame)
+# เหมือนExcel / Google Sheets / SQL table
+# ทำไมใช้ polars Polars ถูกออกแบบมาให้⚡ เร็วกว่า pandas💻 ใช้ memory น้อย 🚀 เหมาะกับ data pipeline
+#ตัวอย่าง polars
+# import polars as pl
+
+# data = [
+#     {"title": "Harry Potter", "year": 1997},
+#     {"title": "Hobbit", "year": 1937}
+# ]
+
+# df = pl.DataFrame(data)
+
+# print(df)
+
+# ผลลัพธ์
+
+# shape: (2, 2)
+# ┌──────────────┬──────┐
+# │ title        │ year │
+# ├──────────────┼──────┤
+# │ Harry Potter │ 1997 │
+# │ Hobbit       │ 1937 │
+# └──────────────┴──────┘
+
+# ตัวอย่างการจัดการข้อมูล เลือก column     df.select("title")
+# filter ข้อมูล   df.filter(pl.col("year") > 1950)
+# sort ข้อมูล   df.sort("year", descending=True)
+
+# ตัวอย่างใช้ requests + polars ด้วยกัน
+# import requests
+# import polars as pl
+
+# url = "https://openlibrary.org/subjects/children.json"
+# resp = requests.get(url)
+# data = resp.json()["works"]
+# df = pl.DataFrame(data)
+# print(df.head())
+# Flow การทำงานใน Data Engineer
+# API
+#  ↓
+# requests
+#  ↓
+# JSON data
+#  ↓
+# polars DataFrame
+#  ↓
+# data cleaning
+#  ↓
+# database
+
+
+# Extract  → requests
+# Transform → polars
+# Load → sqlite
